@@ -6,6 +6,7 @@ if number >= 0:
 elif number < 0:
     number = number * -1
     last_digit = (number % 10) * -1
+    number = number * -1
 
 if last_digit > 5:
     str1 = 'and is greater than 5'
