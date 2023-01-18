@@ -11,6 +11,7 @@ def uppercase(str):
             upper[i] = str[i]
         if j == len(str):
             print("{}".format(upper[i]), end="\n")
+        elif str == "":
+            print("")
         else:
             print("{}".format(upper[i]), end="")
-    
