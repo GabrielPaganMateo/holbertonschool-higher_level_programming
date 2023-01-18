@@ -10,4 +10,3 @@ def uppercase(str):
             upper[i] = str[i]
         if i < len(str):
             print("{}".format(upper[i]), end="")
-    print("\n")
