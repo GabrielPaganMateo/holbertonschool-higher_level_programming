@@ -6,10 +6,10 @@ def delete_at(my_list=[], idx=0):
         return my_list
 
     if idx == 0:
-        new_list = my_list[1:]
+        my_list = my_list[1:]
     elif idx == len(my_list) - 1:
-        new_list = my_list[:-1]
+        my_list = my_list[:-1]
     else:
-        new_list = my_list[:idx] + my_list[idx + 1:]
+        my_list = my_list[:idx] + my_list[idx + 1:]
 
-    return new_list
+    return my_list
