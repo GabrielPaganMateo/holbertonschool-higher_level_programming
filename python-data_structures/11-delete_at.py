@@ -6,7 +6,7 @@ def delete_at(my_list=[], idx=0):
         return my_list
 
     removable = my_list[idx]
-    my_list.remove[my_list[removable]]
+    my_list.remove[removable]
 
     new_list = my_list[:]
 
