@@ -2,6 +2,6 @@
 
 
 def update_dictionary(a_dictionary, key, value):
-    updated = a_dictionary.copy()
-    updated[key] = value
-    return updated
+    updated = {key: value}
+    a_dictionary.update(updated)
+    return a_dictionary
