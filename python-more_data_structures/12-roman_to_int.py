@@ -11,15 +11,11 @@ def roman_to_int(roman_string):
                      "C": 100, "D": 500, "M": 1000}
     _int = 0
     num_list = []
-    num_list.append(0)
     for char in roman_string:
         num_list.append(roman_numeral[char])
 
-    num_list.append(0)
-
     prev_number = 0
     number = 0
-
     for num in reversed(num_list):
         number = num
 
