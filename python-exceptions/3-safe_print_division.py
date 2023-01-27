@@ -4,7 +4,7 @@
 def safe_print_division(a, b):
     try:
         result = a / b
-    except:
+    except Exception:
         result = None
     finally:
         if b != 0:
