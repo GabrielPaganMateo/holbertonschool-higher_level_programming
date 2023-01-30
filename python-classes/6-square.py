@@ -12,13 +12,20 @@ class Square:
     attribute instance
     size: setter and getter properties,
     returns _Square__size or changes _Square__size"""
-    def __init__(self, size=0, position=(0,0)):
+
+
+    def __init__(self, size=0, position=(0, 0)):
         if type(size) is not int:
             raise TypeError('size must be an integer')
         elif size < 0:
             raise ValueError('size must be >= 0')
         else:
             self._Square__size = size
+
+        if type(position) is not tuple:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        else:
+            self._Square__position = position
 
     @property
     def size(self):
@@ -41,16 +48,21 @@ class Square:
             print()
         else:
             for i in range(self._Square__size):
+                k = 0
+                while k < self._Square__position[0]:
+                    print(" ", end="")
+                    k += 1
                 for j in range(self._Square__size):
                     print("#", end="")
                 print()
+
     @property
     def position(self):
-        return self.__position
+        return self._Square__position
     
     @position.setter
     def position(self, value):
-        if type(value) is not tuple(value[0], value[1]):
+        if type(value) is not tuple:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
-            self.__position
+            self._Square__position = value
