@@ -47,6 +47,8 @@ class Square:
         if self._Square__size == 0:
             print()
         else:
+            for h in range(self._Square__position[1]):
+                print()
             for i in range(self._Square__size):
                 k = 0
                 while k < self._Square__position[0]:
