@@ -1,4 +1,3 @@
-fsadfsagsargfasdfasdvg
 This imports the function add-integer
 >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -14,9 +13,9 @@ This imports the function add-integer
 >>> add_integer(100.3, -2)
 98
 
->>> add_integer(4, "School")
-"b must be an integer"
+>>> add_integer(4, "School") 
+b must be an integer
 
 >>> add_integer(None)
-"a must be an integer"
+a must be an integer
 
