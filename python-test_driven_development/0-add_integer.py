@@ -11,9 +11,8 @@ def add_integer(a, b=98):
                 raise TypeError("b must be an integer")
     except Exception as e:
         print(e)
-        return
+    else:
+        a = int(a)
+        b = int(b)
 
-    a = int(a)
-    b = int(b)
-
-    return a + b
+        return a + b

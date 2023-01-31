@@ -1,4 +1,7 @@
-This imports the function add-integer
+The ``0-add_integer`` module
+==========================
+Imports ``add_integer`` function from   
+Using 
 >>> add_integer = __import__('0-add_integer').add_integer
 
 >>> add_integer(1, 2)
