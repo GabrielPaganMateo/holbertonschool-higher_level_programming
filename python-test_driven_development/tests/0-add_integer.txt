@@ -1,7 +1,7 @@
 The ``0-add_integer`` module
 ==========================
-Imports ``add_integer`` function from   
-Using 
+Imports ``add_integer`` function from ``0-add_integer``  
+
 >>> add_integer = __import__('0-add_integer').add_integer
 
 >>> add_integer(1, 2)
@@ -22,3 +22,5 @@ b must be an integer
 >>> add_integer(None)
 a must be an integer
 
+>>> add_integer(None, None)
+a must be an integer
