@@ -81,7 +81,7 @@ Traceback (most recent call last):
 ...
 SyntaxError: invalid syntax
 
->>> add_integer(10e670**3, 1)
+ add_integer(10e670**3, 1)
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
