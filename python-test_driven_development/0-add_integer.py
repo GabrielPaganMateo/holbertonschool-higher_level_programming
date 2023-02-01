@@ -20,6 +20,6 @@ def add_integer(a, b=98):
         if type(b) is not int:
             raise TypeError("b must be an integer")
     except Exception as e:
-        return e
+        print(e)
     else:
         return a + b
