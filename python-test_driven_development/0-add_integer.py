@@ -8,7 +8,6 @@ argument can be None as it will default to 98"""
 
 def add_integer(a, b=98):
     """Function that adds two integers
-    Args:
         a (int): first integer
         b (int): second integer, default value is 98"""
     if type(a) is float:
