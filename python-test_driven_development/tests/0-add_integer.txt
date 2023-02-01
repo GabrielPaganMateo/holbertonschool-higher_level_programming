@@ -81,7 +81,7 @@ Traceback (most recent call last):
 ...
 SyntaxError: invalid syntax
 
->>> add_integer(69e420**4, 777)
+>>> add_integer(777, 69e420**4)
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
