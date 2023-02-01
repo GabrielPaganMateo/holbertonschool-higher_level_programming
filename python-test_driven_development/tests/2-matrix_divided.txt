@@ -6,7 +6,6 @@ of the imported function
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-N
 >>> matrix1 = [[1, 2, 3],[4, 5, 6]]
 >>> matrix_divided(matrix1, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
@@ -16,3 +15,34 @@ N
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix3 = [[1, 2, 3],["98", "School", "Holberton"]]
+>>> matrix_divided(matrix3, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix4 = [["Holberton", "School", "98"],[4, 5, 6]]
+>>> matrix_divided(matrix4, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix5 = [[1, 2],[4, 5, 6]]
+>>> matrix_divided(matrix5, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix6 = [[1, 2, 3], [4, 5]]
+>>> matrix_divided(matrix6, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix7 = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix7, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
