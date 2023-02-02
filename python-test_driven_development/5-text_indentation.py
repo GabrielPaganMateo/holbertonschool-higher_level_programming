@@ -18,6 +18,8 @@ def text_indentation(text):
     else:
         if text != "" and text[0] == " ":
             text = text[1:]
+        if text != "" and text[len(text) - 1] == " ":
+            text = text[:len(text) - 1]
         last_char = " "
         for char in text:
             if char == '.' or char == '?' or char == ':':
