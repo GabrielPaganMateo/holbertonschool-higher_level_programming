@@ -86,3 +86,13 @@ WHAT
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
+
+>>> text_indentation((1, 2, 3, 4))
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation({"Hello": 5, "World": 5})
+Traceback (most recent call last):
+...
+TypeError: text must be a string
