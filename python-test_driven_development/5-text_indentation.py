@@ -15,7 +15,12 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError('text must be a string')
-    else:
+    empty = True
+    for spaces in text:
+        if spaces != " ":
+            empty = False
+    
+    if empty == False:
         if text != "" and text[0] == " ":
             text = text[1:]
         if text != "" and text[len(text) - 1] == " ":
