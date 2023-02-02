@@ -75,3 +75,6 @@ TypeError: text must be a string
 
 >>> text_indentation(" You shall not pass!")
 You shall not pass!
+
+>>> text_indentation("You shall not pass either! ")
+You shall not pass either!
