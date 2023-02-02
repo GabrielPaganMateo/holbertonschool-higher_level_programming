@@ -16,6 +16,8 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
     else:
+        if text != "" and text[0] == " ":
+            text = text[1:]
         last_char = " "
         for char in text:
             if char == '.' or char == '?' or char == ':':
