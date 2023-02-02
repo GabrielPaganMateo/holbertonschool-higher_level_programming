@@ -78,3 +78,11 @@ You shall not pass!
 
 >>> text_indentation("You shall not pass either! ")
 You shall not pass either!
+
+>>> text_indentation(" WHAT ")
+WHAT
+
+>>> text_indentation(3.14)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
