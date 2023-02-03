@@ -71,6 +71,6 @@ class Rectangle:
                 printed_rectangle += "#"
 
         return printed_rectangle
-    
+
     def __repr__(self):
         return f'Rectangle(' + str(self.width) + ', ' + str(self.height) + ')'
