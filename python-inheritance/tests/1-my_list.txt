@@ -6,5 +6,7 @@ of the imported function
 
 >>> MyList = __import__('1-my_list').MyList
 
->>> my_list = MyList()
+>>> my_list1 = MyList([1])
 
+>>> my_list1.print_sorted()
+[1]
