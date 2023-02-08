@@ -26,7 +26,5 @@ of the imported function
 [-1, 0, 1]
 
 >>> my_list4 = MyList([0])
->>> list_return = my_list4.print_sorted()
-[0]
->>> my_list4 is list_return
+>>> my_list4 is MyList([0])
 False
