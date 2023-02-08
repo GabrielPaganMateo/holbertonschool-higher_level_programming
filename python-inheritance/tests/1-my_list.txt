@@ -14,5 +14,6 @@ of the imported function
 >>> print(my_list1.__str__())
 [1]
 
->>> print(my_list1.append(2))
-None
+>>> my_list1.append(2)
+>>> print(my_list1)
+[1, 2]
