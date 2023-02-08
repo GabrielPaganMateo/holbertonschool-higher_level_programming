@@ -7,7 +7,6 @@ of the imported function
 >>> MyList = __import__('1-my_list').MyList
 
 >>> my_list1 = MyList([1])
-
 >>> my_list1.print_sorted()
 [1]
 
@@ -17,3 +16,11 @@ of the imported function
 >>> my_list1.append(2)
 >>> print(my_list1)
 [1, 2]
+
+>>> my_list2 = MyList([])
+>>> my_list2.print_sorted()
+[]
+
+>>> my_list3 = MyList([0, 1, -1])
+>>> my_list3.print_sorted()
+[-1, 0, 1]
