@@ -1,7 +1,10 @@
-The ``0-add_integer`` doctest
+The ``1-my_list`` doctest
 ==========================
-Imports ``add_integer`` function from ``0-add_integer``
+Imports ``my_list`` function from ``1-my_list``
 and tests for any edge cases that may break the functionality
 of the imported function
 
->>> add_integer = __import__('0-add_integer').add_integer
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+
