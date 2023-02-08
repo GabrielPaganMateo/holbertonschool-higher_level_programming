@@ -24,3 +24,7 @@ of the imported function
 >>> my_list3 = MyList([0, 1, -1])
 >>> my_list3.print_sorted()
 [-1, 0, 1]
+
+>>> my_list4 = MyList([0])
+>>> list_return = my_list4.print_sorted()
+[0]
