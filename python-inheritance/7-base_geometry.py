@@ -16,5 +16,3 @@ class BaseGeometry:
             raise TypeError(print("{} must be an integer".format(name)))
         elif value <= 0:
             raise ValueError(print("{} must be greater than 0").format(name))
-        
-
