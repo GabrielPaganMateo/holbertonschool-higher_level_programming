@@ -15,4 +15,4 @@ of the imported function
 [1]
 
 >>> print(my_list1.append(2))
-[1, 2]
+None
