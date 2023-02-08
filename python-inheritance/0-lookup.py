@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """
 This module imports a function that returns
 the list of available attributes and methods of
