@@ -1,0 +1,7 @@
+The ``0-add_integer`` doctest
+==========================
+Imports ``add_integer`` function from ``0-add_integer``
+and tests for any edge cases that may break the functionality
+of the imported function
+
+>>> add_integer = __import__('0-add_integer').add_integer
