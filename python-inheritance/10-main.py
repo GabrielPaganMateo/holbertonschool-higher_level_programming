@@ -3,5 +3,8 @@ Square = __import__('10-square').Square
 
 s = Square(13)
 
+x = Square("13")
+print(x)
 print(s)
 print(s.area())
+
