@@ -4,10 +4,11 @@ Imports the class Rectangle
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     A class that defines the methods and
-    fields of a Rectangle 
+    fields of a Rectangle
     """
     def __init__(self, width, height):
         self.__width = width
