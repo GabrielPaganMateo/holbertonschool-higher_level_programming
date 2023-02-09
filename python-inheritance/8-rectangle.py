@@ -10,7 +10,7 @@ class Rectangle(BaseGeometry):
     fields of a Rectangle 
     """
     def __init__(self, width, height):
-        BaseGeometry.integer_validator(width)
-        BaseGeometry.integer_validator(height)
+        BaseGeometry.integer_validator("width", width)
+        BaseGeometry.integer_validator("height", height)
         self._Rectangle__width = width
         self._Rectangle__height = height
