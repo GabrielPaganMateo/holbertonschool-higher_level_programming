@@ -11,4 +11,4 @@ def write_file(filename="", text=""):
     characters written
     """
     with open(filename, 'w') as file:
-        file.write(text)
+        return file.write(text)
