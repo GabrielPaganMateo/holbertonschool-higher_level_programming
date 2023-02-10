@@ -14,13 +14,15 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        attrsDict = {}
-        if attrs is type(list):
+        if attrs is not None:
+            my_dict = {}
             for i in attrs:
-                if i is type(str):
-                    attrsDict[i] = self.i
-                else:
-                    break
-            return attrsDict
+                if str(i) == "first_name":
+                    my_dict[i] = self.first_name
+                elif i == "last_name":
+                    my_dict[i] = self.last_name
+                elif i == "age":
+                    my_dict[i] = self.age
+            return my_dict
         else:
             return self.__dict__
