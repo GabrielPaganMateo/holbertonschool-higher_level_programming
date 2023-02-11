@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+"""
+pascal_triangle function
+"""
+
+
+def pascal_triangle(n):
+    the_list = []
+    count = 2
+    for i in range(n):
+        a_list = []
+        num = 1
+        for j in range(1, count):
+            a_list.append(num)
+            num *= i
+            if j != 0 and a_list[j - 1] < num:
+                pass
+        the_list.append(a_list)
+        count += 1
+    return the_list
