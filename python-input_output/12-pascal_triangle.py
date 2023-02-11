@@ -5,6 +5,10 @@ pascal_triangle function
 
 
 def pascal_triangle(n):
+    """
+    Returns a list of lists of integers
+    representing pascals triangle
+    """
     the_list = []
     count = 2
     for i in range(n):
