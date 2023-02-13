@@ -113,6 +113,9 @@ class Rectangle(Base):
                 f'{self.__width}/{self.__height}')
 
     def update(self, *args):
+        """
+        Method to update all attributes of object
+        """
         argument = 0
         if args is not None:
             for attr in args:
