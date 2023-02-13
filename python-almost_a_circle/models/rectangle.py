@@ -119,7 +119,7 @@ class Rectangle(Base):
         argument = 0
         if args is not None:
             for attr in args:
-                if argument == 0: 
+                if argument == 0:
                     self.id = attr
                 elif argument == 1:
                     self.__width = attr
