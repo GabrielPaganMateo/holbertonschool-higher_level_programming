@@ -99,7 +99,10 @@ class Rectangle(Base):
         """
         Displays dimensions of rectangle with #
         """
+        for newline in range(self.__y):
+            print()
         for hash in range(self.__height):
+            print(' ' * self.__x, end="")
             print('#' * self.__width)
 
     def __str__(self):
