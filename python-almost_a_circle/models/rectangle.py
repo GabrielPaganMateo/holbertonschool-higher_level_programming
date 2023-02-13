@@ -94,3 +94,9 @@ class Rectangle(Base):
         Return the area of the rectangle
         """
         return self.__width * self.__height
+
+    def display(self):
+        for hash in range(self.__height):
+            print('#' * self.__width)
+
+    
