@@ -96,7 +96,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """
+        Displays dimensions of rectangle with #
+        """
         for hash in range(self.__height):
             print('#' * self.__width)
-
-    
