@@ -111,3 +111,19 @@ class Rectangle(Base):
         """
         return (f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - '
                 f'{self.__width}/{self.__height}')
+
+    def update(self, *args):
+        argument = 0
+        if args is not None:
+            for attr in args:
+                if argument == 0: 
+                    self.id = attr
+                elif argument == 1:
+                    self.__x = attr
+                elif argument == 2:
+                    self.__y = attr
+                elif argument == 3:
+                    self.__width = attr
+                elif argument == 4:
+                    self.__height = attr
+                argument += 1
