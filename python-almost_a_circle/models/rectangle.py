@@ -112,7 +112,7 @@ class Rectangle(Base):
         return (f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - '
                 f'{self.__width}/{self.__height}')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Method to update all attributes of object
         """
@@ -130,3 +130,15 @@ class Rectangle(Base):
                 elif argument == 4:
                     self.__y = attr
                 argument += 1
+        elif kwargs is not None:
+            for key, value in kwargs.items():
+                if kwargs[key] == "id":
+                    self.id = value
+                elif kwargs[key] == "width":
+                    self.__width = value
+                elif kwargs[key] == "height":
+                    self.__height = value
+                elif kwargs[key] == "x":
+                    self.__x = value
+                elif kwargs[key] == "y":
+                    self.__y = value
