@@ -130,15 +130,15 @@ class Rectangle(Base):
                 elif argument == 4:
                     self.__y = attr
                 argument += 1
-        elif kwargs is not None:
-            for key, value in kwargs.items():
-                if kwargs[key] == "id":
-                    self.id = value
-                elif kwargs[key] == "width":
-                    self.__width = value
-                elif kwargs[key] == "height":
-                    self.__height = value
-                elif kwargs[key] == "x":
-                    self.__x = value
-                elif kwargs[key] == "y":
-                    self.__y = value
+
+        for key in kwargs:
+            if key == "id":
+                self.id = kwargs.get(key)
+            elif key == "width":
+                self.__width = kwargs.get(key)
+            elif key == "height":
+                self.__height = kwargs.get(key)
+            elif key == "x":
+                self.__x = kwargs.get(key)
+            elif key == "y":
+                self.__y = kwargs.get(key)
