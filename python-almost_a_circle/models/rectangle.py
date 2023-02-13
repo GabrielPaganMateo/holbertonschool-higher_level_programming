@@ -122,11 +122,11 @@ class Rectangle(Base):
                 if argument == 0: 
                     self.id = attr
                 elif argument == 1:
-                    self.__x = attr
-                elif argument == 2:
-                    self.__y = attr
-                elif argument == 3:
                     self.__width = attr
-                elif argument == 4:
+                elif argument == 2:
                     self.__height = attr
+                elif argument == 3:
+                    self.__x = attr
+                elif argument == 4:
+                    self.__y = attr
                 argument += 1
