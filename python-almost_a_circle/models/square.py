@@ -58,3 +58,27 @@ class Square(Rectangle):
             elif key == "y":
                 (super(__class__, self.__class__)
                     .y.__set__(self, kwargs.get(key)))
+
+    def to_dictionary(self):
+        """
+        Returns dictionary representation 
+        of Square object attributes
+        """
+        dict_repr = {}
+        if self.id:
+            dict_repr['id'] = self.id
+        else:
+            dict_repr['id'] = None
+        if self.x:
+            dict_repr['x'] = self.x
+        else:
+            dict_repr['x'] = None
+        if self.size:
+            dict_repr['size'] = self.width
+        else:
+            dict_repr['size'] = None
+        if self.y:
+            dict_repr['y'] = self.y
+        else:
+            dict_repr['y'] = None
+        return dict_repr
