@@ -61,7 +61,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        Returns dictionary representation 
+        Returns dictionary representation
         of Square object attributes
         """
         dict_repr = {}
