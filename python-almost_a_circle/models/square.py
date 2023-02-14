@@ -26,6 +26,10 @@ class Square(Rectangle):
         super(__class__, self.__class__).width.__set__(self, size)
 
     def update(self, *args, **kwargs):
+        """
+        Class that updates the attributes
+        of a square Object
+        """
         argument = 0
         if args is not None:
             for attr in args:
