@@ -38,3 +38,12 @@ class Base:
                 for list_dict in list_objs:
                     list_to_save.append(list_dict.to_dictionary())
                 file.write(cls.to_json_string(list_to_save))
+
+    @staticmethod
+    def from_json_string(json_string):
+        list_to_return = []
+        if json_string is None:
+                return list_to_return
+        else:
+            list_to_return = json.loads(json_string)
+            return list_to_return
