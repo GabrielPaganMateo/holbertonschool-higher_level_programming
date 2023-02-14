@@ -36,19 +36,25 @@ class Square(Rectangle):
                 if argument == 0:
                     self.id = attr
                 elif argument == 1:
-                    super(__class__, self.__class__).width.__set__(self, attr)
+                    (super(__class__, self.__class__)
+                    .width.__set__(self, attr))
                 elif argument == 2:
-                    super(__class__, self.__class__).x.__set__(self, attr)
+                    (super(__class__, self.__class__)
+                    .x.__set__(self, attr))
                 elif argument == 3:
-                    super(__class__, self.__class__).y.__set__(self, attr)
+                    (super(__class__, self.__class__)
+                    .y.__set__(self, attr))
                 argument += 1
 
         for key in kwargs:
             if key == "id":
                 self.id = kwargs.get(key)
             elif key == "size":
-                super(__class__, self.__class__).width.__set__(self, kwargs.get(key))
+                (super(__class__, self.__class__)
+                .width.__set__(self, kwargs.get(key)))
             elif key == "x":
-                super(__class__, self.__class__).x.__set__(self, kwargs.get(key))
+                (super(__class__, self.__class__)
+                .x.__set__(self, kwargs.get(key)))
             elif key == "y":
-                super(__class__, self.__class__).y.__set__(self, kwargs.get(key))
+                (super(__class__, self.__class__)
+                .y.__set__(self, kwargs.get(key)))
