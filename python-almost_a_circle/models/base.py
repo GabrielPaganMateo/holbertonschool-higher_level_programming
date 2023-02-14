@@ -36,5 +36,5 @@ class Base:
                 file.write(cls.to_json_string(list_to_save))
             else:
                 for list_dict in list_objs:
-                    list_to_save.append(list_dict.to_dictionary())    
+                    list_to_save.append(list_dict.to_dictionary())
                 file.write(cls.to_json_string(list_to_save))
