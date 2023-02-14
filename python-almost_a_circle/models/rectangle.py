@@ -142,3 +142,17 @@ class Rectangle(Base):
                 self.__x = kwargs.get(key)
             elif key == "y":
                 self.__y = kwargs.get(key)
+
+    def to_dictionary(self):
+        dict_repr = {}
+        if self.__x:
+            dict_repr['x'] = self.__x
+        if self.__y:
+            dict_repr['y'] = self.__y
+        if self.id:
+            dict_repr['id'] = self.id
+        if self.__height:
+            dict_repr['height'] = self.__height
+        if self.__width:
+            dict_repr['width'] = self.__width
+        return dict_repr
