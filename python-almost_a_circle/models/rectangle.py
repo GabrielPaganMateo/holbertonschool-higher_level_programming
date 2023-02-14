@@ -144,6 +144,10 @@ class Rectangle(Base):
                 self.__y = kwargs.get(key)
 
     def to_dictionary(self):
+        """
+        Returns dictionary representation
+        of Rectangle object attributes
+        """
         dict_repr = {}
         if self.__x:
             dict_repr['x'] = self.__x
