@@ -24,3 +24,27 @@ class Square(Rectangle):
     @size.setter
     def size(self, size):
         super(__class__, self.__class__).width.__set__(self, size)
+
+    def update(self, *args, **kwargs):
+        argument = 0
+        if args is not None:
+            for attr in args:
+                if argument == 0:
+                    self.id = attr
+                elif argument == 1:
+                    super(__class__, self.__class__).width.__set__(self, attr)
+                elif argument == 2:
+                    super(__class__, self.__class__).x.__set__(self, attr)
+                elif argument == 3:
+                    super(__class__, self.__class__).y.__set__(self, attr)
+                argument += 1
+
+        for key in kwargs:
+            if key == "id":
+                self.id = kwargs.get(key)
+            elif key == "size":
+                super(__class__, self.__class__).width.__set__(self, kwargs.get(key))
+            elif key == "x":
+                super(__class__, self.__class__).x.__set__(self, kwargs.get(key))
+            elif key == "y":
+                super(__class__, self.__class__).y.__set__(self, kwargs.get(key))
