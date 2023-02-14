@@ -33,7 +33,7 @@ class Base:
         with open(filename, 'w') as file:
             list_to_save = []
             if list_objs is None:
-                pass
+                file.write(cls.to_json_string(list_to_save))
             else:
                 for list_dict in list_objs:
                     list_to_save.append(list_dict.to_dictionary())    
