@@ -45,7 +45,7 @@ class Base:
         if json_string is None:
                 return list_to_return
         else:
-            list_to_return = json.loads(json_string)
+            list_to_return = json.load(json_string)
             return list_to_return
 
     @classmethod
@@ -60,10 +60,10 @@ class Base:
     @classmethod
     def load_from_file(cls):
         filename = f'{cls.__name__}.json'
-        list_of_instances = cls.from_json_string(None)
+        list_of_instances = []
         try:
             with open(filename, 'r') as file:
-                dict_of_attrs = json.load(file)
+                dict_of_attrs = cls.from_json_string(file)
             for dict in dict_of_attrs:
                 list_of_instances.append(cls.create(**dict))
         except Exception:
