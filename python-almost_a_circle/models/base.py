@@ -56,3 +56,17 @@ class Base:
             instance = cls(1, 1)
         cls.update(instance, **dictionary)
         return instance
+
+    @classmethod
+    def load_from_file(cls):
+        filename = f'{cls.__name__}.json'
+        list_of_instances = []
+        try:
+            with open(filename, 'r') as file:
+                dict_of_attrs = json.load(file)
+            for dict in dict_of_attrs:
+                list_of_instances.append(cls.create(**dict))
+        except Exception:
+            return []
+        else:
+            return list_of_instances

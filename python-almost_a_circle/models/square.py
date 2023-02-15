@@ -72,7 +72,7 @@ class Square(Rectangle):
         if self.x:
             dict_repr['x'] = self.x
         else:
-            dict_repr['x'] = None
+            dict_repr['x'] = 0
         if self.size:
             dict_repr['size'] = self.width
         else:
@@ -80,5 +80,5 @@ class Square(Rectangle):
         if self.y:
             dict_repr['y'] = self.y
         else:
-            dict_repr['y'] = None
+            dict_repr['y'] = 0
         return dict_repr
