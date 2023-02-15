@@ -54,5 +54,5 @@ class Base:
             instance = cls(1)
         elif cls.__name__ == "Rectangle":
             instance = cls(1, 1)
-        instance.update(instance, **dictionary)
+        cls.update(instance, **dictionary)
         return instance
