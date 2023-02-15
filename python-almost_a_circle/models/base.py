@@ -60,7 +60,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         filename = f'{cls.__name__}.json'
-        list_of_instances = []
+        list_of_instances = cls.from_json_string(None)
         try:
             with open(filename, 'r') as file:
                 dict_of_attrs = json.load(file)
