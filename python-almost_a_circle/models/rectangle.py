@@ -152,11 +152,11 @@ class Rectangle(Base):
         if self.__x:
             dict_repr['x'] = self.__x
         else:
-            dict_repr['x'] = None
+            dict_repr['x'] = 0
         if self.__y:
             dict_repr['y'] = self.__y
         else:
-            dict_repr['y'] = None
+            dict_repr['y'] = 0
         if self.id:
             dict_repr['id'] = self.id
         else:

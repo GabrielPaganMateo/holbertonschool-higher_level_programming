@@ -47,3 +47,12 @@ class Base:
         else:
             list_to_return = json.loads(json_string)
             return list_to_return
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Square":
+            instance = cls(1)
+        elif cls.__name__ == "Rectangle":
+            instance = cls(1, 1)
+        instance.update(instance, **dictionary)
+        return instance
