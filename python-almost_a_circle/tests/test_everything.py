@@ -140,8 +140,14 @@ class TestEverything(unittest.TestCase):
     def test_json_string(self):
         None_list = Base.to_json_string(None)
         self.assertEqual(None_list, '[]')
+
+    def test_json_string_empty(self):
         empty_list = Base.to_json_string([])
         self.assertEqual(empty_list, '[]')
+
+    def test_json_string_id(self):
+        id_list = Base.to_json_string([{'id':12}])
+        self.assertEqual(id_list, '[{"id": 12}]')
 
     def test_from_json_string(self):
         None_list = Base.from_json_string(None)
