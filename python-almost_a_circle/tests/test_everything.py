@@ -135,3 +135,9 @@ class TestEverything(unittest.TestCase):
         self.assertEqual(object_1._Base__nb_objects, 1)
         object_2 = Base()
         self.assertEqual(object_2._Base__nb_objects, 2)
+
+    def test_json_string(self):
+        None_list = Base.to_json_string(None)
+        self.assertEqual(None_list, [])
+        empty_list = Base.to_json_string([])
+        self.assertEqual(empty_list, "")
