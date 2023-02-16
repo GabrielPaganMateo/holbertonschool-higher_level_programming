@@ -150,7 +150,7 @@ class TestEverything(unittest.TestCase):
         self.assertEqual(empty_list, '"[]"')
 
     """Testing save to file"""
-    def Test_save_to_file(self):
-        Base.Rectangle.save_to_file(None)
+    def test_save_to_file(self):
+        Rectangle.save_to_file(None)
         with open("Rectangle.json") as file:
-            self.assertEqual('[]', file.read())
+            self.assertMultiLineEqual('[]', file.read())
