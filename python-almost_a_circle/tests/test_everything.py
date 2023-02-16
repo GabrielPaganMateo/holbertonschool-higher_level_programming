@@ -154,3 +154,7 @@ class TestEverything(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json") as file:
             self.assertEqual('[]', file.read())
+
+
+if __name__ == '__main__':
+    unittest.main()
