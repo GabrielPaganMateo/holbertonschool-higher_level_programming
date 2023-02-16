@@ -5,8 +5,9 @@ import unittest.mock
 from unittest.mock import patch
 
 from models.rectangle import Rectangle
+from models.base import Base
 
-class TestRectangle(unittest.TestCase):
+class TestEverything(unittest.TestCase):
 
     """ Testing width conditions """
     def test_width(self):
@@ -112,6 +113,12 @@ class TestRectangle(unittest.TestCase):
 
     """  Testing to_dictionary method """
     def test_to_dictionary(self):
-        rec = Rectangle(10, 2, 1, 9)
-        result = {'x': 1, 'y': 9, 'id': 8, 'height': 2, 'width': 10}
+        rec = Rectangle(10, 2, 1, 9, 9)
+        result = {'x': 1, 'y': 9, 'id': 9, 'height': 2, 'width': 10}
         self.assertDictEqual(rec.to_dictionary(), result)
+
+    """  Testing create method """
+    def test_create(self):
+        Base_obj = Base(89)
+        Rect_obj = Rectangle.create(**{'id': 89})
+        self.assertIsNot(Base_obj, Rect_obj)
