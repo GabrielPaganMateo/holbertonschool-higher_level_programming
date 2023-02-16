@@ -1,8 +1,9 @@
 
 import unittest
-from io import StringIO
+import io
 import unittest.mock
 from unittest.mock import patch
+import sys
 
 from models.rectangle import Rectangle
 from models.base import Base
@@ -122,3 +123,12 @@ class TestEverything(unittest.TestCase):
         Base_obj = Base(89)
         Rect_obj = Rectangle.create(**{'id': 89})
         self.assertIsNot(Base_obj, Rect_obj)
+
+    """  Testing display method"""
+
+    """ Testing Base for ID"""
+    def test_ID(self):
+        object_1 = Base()
+        self.assertEqual(object_1._Base__nb_objects, 1)
+        object_2 = Base()
+        self.assertEqual(object_2._Base__nb_objects, 2)
