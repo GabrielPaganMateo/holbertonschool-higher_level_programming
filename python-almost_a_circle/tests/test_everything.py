@@ -1,10 +1,7 @@
 
 import unittest
-import io
-import unittest.mock
-from unittest.mock import patch
-import sys
 
+from models.square import Square
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -14,14 +11,20 @@ class TestEverything(unittest.TestCase):
     def test_width(self):
         rectangle = Rectangle(2, 4)
         self.assertEqual(rectangle.width, 2)
+        square = Square(2)
+        self.assertEqual(square.size, 2)
 
     def test_negative_width(self):
         with self.assertRaises(ValueError):
-            rec3 = Rectangle(-4, 1)
+            rectangle = Rectangle(-4, 1)
+        with self.assertRaises(ValueError):
+            square = Square(-7)
 
     def test_zero_width(self):
         with self.assertRaises(ValueError):
-            rec = Rectangle(0, 5)
+            rectangle = Rectangle(0, 5)
+        with self.assertRaises(ValueError):
+            square = Square(0)
 
     def test_string_width(self):
         with self.assertRaises(TypeError):
