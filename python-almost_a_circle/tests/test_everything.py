@@ -154,6 +154,8 @@ class TestEverything(unittest.TestCase):
         Base.save_to_file(None)
         with open("Rectangle.json") as file:
             self.assertEqual('[]', file.read())
+
+    def test_save_to_file_empty_list(self):
         Base.save_to_file([])
         with open("Rectangle.json") as file:
             self.assertEqual('[]', file.read())
