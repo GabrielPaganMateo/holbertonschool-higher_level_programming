@@ -170,3 +170,8 @@ class Rectangle(Base):
         else:
             dict_repr['width'] = None
         return dict_repr
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        super().save_to_file(list_objs)
+        
