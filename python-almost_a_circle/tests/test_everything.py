@@ -147,7 +147,7 @@ class TestEverything(unittest.TestCase):
 
     def test_json_string_id(self):
         id_list = Base.to_json_string([{'id':12}])
-        self.assertIs(type(id_list), str)
+        self.assertIsInstance(id_list, str)
 
     def test_from_json_string(self):
         None_list = Base.from_json_string(None)
