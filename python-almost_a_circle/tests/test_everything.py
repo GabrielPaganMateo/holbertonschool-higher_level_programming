@@ -147,3 +147,9 @@ class TestEverything(unittest.TestCase):
         self.assertEqual(None_list, [])
         empty_list = Base.to_json_string("[]")
         self.assertEqual(empty_list, '"[]"')
+
+    """Testing save to file"""
+    def Test_save_to_file(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json") as file:
+            self.assertEqual(file.read(), "[]")
