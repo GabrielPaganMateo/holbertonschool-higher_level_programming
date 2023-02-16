@@ -141,3 +141,9 @@ class TestEverything(unittest.TestCase):
         self.assertEqual(None_list, '[]')
         empty_list = Base.to_json_string([])
         self.assertEqual(empty_list, '[]')
+
+    def test_from_json_string(self):
+        None_list = Base.from_json_string(None)
+        self.assertEqual(None_list, [])
+        empty_list = Base.to_json_string("[]")
+        self.assertEqual(empty_list, '"[]"')
