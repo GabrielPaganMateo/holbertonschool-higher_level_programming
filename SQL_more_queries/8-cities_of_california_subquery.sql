@@ -1,2 +1,2 @@
 -- cities of california
-select * from cities where state_id = 1;
+SELECT * FROM cities WHERE state_id = 1;
