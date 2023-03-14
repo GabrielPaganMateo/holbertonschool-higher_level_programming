@@ -3,6 +3,7 @@
 Script that lists all states 
 from the database hbtn_0e_0_usa
 """
+# Module for connecting to mySQL database
 import MySQLdb
 """
 I am currently trying to
