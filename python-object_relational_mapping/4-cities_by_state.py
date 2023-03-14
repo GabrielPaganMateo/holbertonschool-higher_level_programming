@@ -13,7 +13,9 @@ if __name__ == '__main__':
     db = (MySQLdb.connect(host='localhost', port=3306, user=username,
                           passwd=password, db=database))
     cur = db.cursor()
-    cur.execute(("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id"))
+    str1 = f'SELECT cities.id, cities.name, states.name'
+    str2 = f'FROM cities JOIN states ON cities.state_id = states.id'
+    cur.execute(str1 + str2)
     states = cur.fetchall()
     for state in states:
         print(state)
