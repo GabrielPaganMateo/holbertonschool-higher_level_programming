@@ -4,12 +4,21 @@ Script that lists all states from the database hbtn_0e_0_usa
 """
 # Module for connecting to mySQL database
 import MySQLdb
-"""
-I am currently trying to
-document this module so the
-checkers pass
-"""
+from sys import argv
 
-db = MySQLdb.connect(host="localhost", port=3306, user="gabriel", passwd="password", db="hbtn_0e_0_usa")
-cur = db.cursor()
-cur.execute("SELECT * FROM states")
+if __name__ == '__main__':
+
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
+
+    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states")
+    states = cur.fetchall()
+    for state in states:
+        print(state)
+    
+    cur.close()
+    db.close()
+
