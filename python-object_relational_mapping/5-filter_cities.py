@@ -16,7 +16,7 @@ if __name__ == '__main__':
                           passwd=password, db=database))
     cur = db.cursor()
     str1 = f'SELECT cities.name FROM cities JOIN states'
-    str2 = f' ON cities.state_id = states.id'
+    str2 = f' ON cities.state_id = states.id WHERE states.name = {state_name}'
     str3 = str1 + str2
     cur.execute(str3)
     states = cur.fetchall()
