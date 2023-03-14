@@ -21,9 +21,14 @@ if __name__ == '__main__':
     cur.execute(str3, state_name)
     states = cur.fetchall()
     for state in states:
+        i = 0
         str = ''
         for name in state:
             str = str + name
-        print(str, end='')
+        if i < len(states) - 1:
+            print(str + ', ', end='')
+            i += 1
+        else:
+            print(str)
     cur.close()
     db.close()
