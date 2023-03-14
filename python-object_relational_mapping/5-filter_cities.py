@@ -20,8 +20,8 @@ if __name__ == '__main__':
     str3 = str1 + str2
     cur.execute(str3, state_name)
     states = cur.fetchall()
+    i = 0
     for state in states:
-        i = 0
         str = ''
         for name in state:
             str = str + name
