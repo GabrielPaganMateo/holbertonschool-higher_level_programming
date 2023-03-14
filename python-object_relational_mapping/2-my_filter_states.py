@@ -1,0 +1,23 @@
+#!/usr/bin/python
+"""
+Takes an argument and displays
+all values in the states table
+"""
+import MySQLdb
+from sys import argv
+
+if __name__ == '__main__':
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
+    state_name = argv[4]
+
+    db = (MySQLdb.connect(host='localhost', port=3306, user=username,
+                          passwd=password, db=database))
+    cur = db.cursor()
+    cur.execute(f'SELECT * FROM states WHERE name = {state_name}')
+    states = cur.fetchall()
+    for state in states:
+        print(state)
+    cur.close()
+    db.close()
