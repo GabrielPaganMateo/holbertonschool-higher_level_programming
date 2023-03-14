@@ -22,13 +22,10 @@ if __name__ == '__main__':
     states = cur.fetchall()
     i = 0
     for state in states:
-        str = ''
-        for name in state:
-            str = str + name
+        print(state[0], end='')
         if i < len(states) - 1:
-            print(str + ', ', end='')
+            print(', ', end='')
             i += 1
-        else:
-            print(str)
+    print()
     cur.close()
     db.close()
