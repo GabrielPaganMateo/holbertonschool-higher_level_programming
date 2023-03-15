@@ -13,5 +13,4 @@ if __name__ == '__main__':
     Session = sessionmaker(engine)
     session = Session()
     states  = session.query(State).all()
-    for state in states:
-        print(state.id, state.name)
+    print(states)
