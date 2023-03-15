@@ -15,14 +15,11 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).all()
-    found = 0
     for state in states:
         if state.name.find(sys.argv[4]) != -1:
             print("{}".format(state.id))
-            notfound = 0
-            found = 1
-        else:
-            notfound = 1
-    if notfound == 1 and found == 0:
-        print("Not found")
+            session.close()
+            exit()
+    print("Not found")
     session.close()
+            
