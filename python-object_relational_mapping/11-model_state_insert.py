@@ -16,7 +16,7 @@ if __name__ == '__main__':
     session = Session()
     states = session.query(State).all()
     table_len = len(states) + 1
-    new_state = State(id = table_len, name = "Louisiana")
+    new_state = State(id=table_len, name="Louisiana")
     print(new_state.id)
     session.add(new_state)
     session.commit()
