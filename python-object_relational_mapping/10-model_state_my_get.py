@@ -14,11 +14,10 @@ if __name__ == '__main__':
                                     sys.argv[3]), pool_pre_ping=True))
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).all()
-    for state in states:
-        if state.name.find(sys.argv[4]) != -1:
-            print("{}".format(state.id))
-            session.close()
-            exit()
-    print("Not found")
+    states = session.query(State).filter(State.name == sys.argv[4]).scalar()
+    
+    if states is not None:
+        print("{}".format(states.id))
+    else:
+        print("Not found")
     session.close()
