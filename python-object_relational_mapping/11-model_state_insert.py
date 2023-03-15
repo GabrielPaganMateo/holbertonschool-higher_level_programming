@@ -15,8 +15,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).all()
-    table_len = len(states)
-    new_state = State(id = table_len + 1, name = "Louisiana")
+    table_len = len(states) + 1
+    new_state = State(id = table_len, name = "Louisiana")
     print(new_state.id)
     session.add(new_state)
+    session.commit()
     session.close()
