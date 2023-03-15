@@ -12,5 +12,6 @@ if __name__ == '__main__':
                             .format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True))
     Session = sessionmaker(engine)
     session = Session()
-    states = session.query(State).all()
-    print(states)
+    states = session.query(State)
+    for state in states:
+        print(state.id, state.name)
