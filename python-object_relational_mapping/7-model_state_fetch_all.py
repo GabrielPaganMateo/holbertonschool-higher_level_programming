@@ -14,4 +14,4 @@ if __name__ == '__main__':
     session = Session()
     states = session.query(State).all()
     for item in states:
-        print(item.name)
+        print("{}: {}".format(item.id, item.name))
