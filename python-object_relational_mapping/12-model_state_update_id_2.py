@@ -13,7 +13,7 @@ if __name__ == '__main__':
                                     sys.argv[3]), pool_pre_ping=True))
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).get(2)
+    states = session.get(State, 2)
     states.name = "New Mexico"
     session.commit()
     session.close()
