@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let C = 'C is fun'
-let py = 'Python is cool'
-let js = 'JavaScript is amazing'
+const C = 'C is fun';
+const py = 'Python is cool';
+const js = 'JavaScript is amazing';
 console.log(`${C}\n${py}\n${js}`);
