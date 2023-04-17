@@ -18,5 +18,5 @@ if (args[2] === undefined) {
     }
     i++;
   }
-  console.log(small)
+  console.log(small);
 }
