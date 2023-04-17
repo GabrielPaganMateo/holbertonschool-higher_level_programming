@@ -5,6 +5,6 @@ if (argumentNum === 2) {
   console.log('No argument');
 } else if (argumentNum === 3) {
   console.log('Argument found');
-} else if (argumentNum === 4) {
+} else if (argumentNum >= 4) {
   console.log('Arguments found');
 }
