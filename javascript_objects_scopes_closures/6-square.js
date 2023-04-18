@@ -7,22 +7,22 @@ class Square extends PapaSquare {
     super(size, size);
   }
 
-  charPrint(c) {
-        if (c === undefined) {
-            c = 'X'
-        }
-        let i = 0;
-        let length = '';
-        while (i < this.width) {
-          length += c;
-          i++;
-        }
-        let j = 0;
-        while (j < this.height) {
-          console.log(length);
-          j++;
-        }
-      }
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
+    let i = 0;
+    let length = '';
+    while (i < this.width) {
+      length += c;
+      i++;
+    }
+    let j = 0;
+    while (j < this.height) {
+      console.log(length);
+      j++;
+    }
+  }
 }
 
 module.exports = Square;
