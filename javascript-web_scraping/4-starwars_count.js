@@ -7,13 +7,12 @@ request(url, (error, response, body) => {
     console.log(error);
   } else {
     const obj = JSON.parse(body);
-    const films = obj.results
+    const films = obj.results;
     let cameoCount = 0;
-    for (let i = 0; i < 5; i++)
-    {
-        if (films[i]['characters'].includes("https://swapi-api.hbtn.io/api/people/18/")) {
-            cameoCount += 1
-        }
+    for (let i = 0; i < 5; i++) {
+      if (films[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+        cameoCount += 1;
+      }
     }
     console.log(cameoCount);
   }
