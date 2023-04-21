@@ -11,7 +11,6 @@ request(url, (error, response, body) => {
     let cameoCount = 0;
     for (let i = 0; i < films.length; i++) {
       for (let j = 0; j < films[i].characters.length; j++) {
-        console.log(films[i].characters[j]);
         if (films[i].characters[j].includes('18')) {
           cameoCount += 1;
         }
