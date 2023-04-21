@@ -6,14 +6,18 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    const obj = JSON.parse(body);
-    const films = obj.results;
+    const api = JSON.parse(body);
+    const films = api.results;
     let cameoCount = 0;
     for (let i = 0; i < films.length; i++) {
-      if (films[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-        cameoCount += 1;
+      for (let j = 0; j < films[i].characters.length; j++) {
+        console.log(films[i].characters[j]);
+        if (films[i].characters[j].includes('18')) {
+          cameoCount += 1;
+        }
       }
     }
     console.log(cameoCount);
   }
-});
+}
+);
