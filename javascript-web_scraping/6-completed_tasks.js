@@ -19,7 +19,9 @@ request(url, (error, response, body) => {
       if (tasks[i].completed === true) {
         taskCount++;
       }
-      obj[user] = taskCount;
+      if (taskCount !== 0) {
+        obj[user] = taskCount;
+      }
     }
     console.log(obj);
   }
