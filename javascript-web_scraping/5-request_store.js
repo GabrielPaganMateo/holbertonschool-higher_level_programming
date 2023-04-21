@@ -8,10 +8,11 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    text = body;
+    const text = body;
     fs.writeFile(path, text, 'utf-8', function (err) {
-        if (err) {
-          console.log(err);
-        }
-  });
-  }})
+      if (err) {
+        console.log(err);
+      }
+    });
+  }
+});
