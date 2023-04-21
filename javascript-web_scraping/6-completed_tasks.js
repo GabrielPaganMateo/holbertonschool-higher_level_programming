@@ -6,23 +6,17 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    const obj = {};
     const tasks = JSON.parse(body);
-    let taskCount = 0;
-    let userCount = 1;
+    const all = {};
     for (let i = 0; i < tasks.length; i++) {
-      if (tasks[i].userId !== userCount) {
-        userCount++;
-        taskCount = 0;
-      }
-      const user = tasks[i].userId;
       if (tasks[i].completed === true) {
-        taskCount++;
-      }
-      if (taskCount !== 0) {
-        obj[user] = taskCount;
+        if (all[tasks[i].userId] === undefined) {
+          all[tasks[i].userId] = 1;
+        } else {
+          all[tasks[i].userId]++;
+        }
       }
     }
-    console.log(obj);
+    console.log(all);
   }
 });
